@@ -31,8 +31,14 @@ jobs:
         run: |
           python -m compileall backend frontend tests
 
+      - name: Check installed packages
+        run: |
+          python --version
+          python -m pytest --version
+          pip list
+
       - name: Run pytest
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
-          python -m pytest
+          python -m pytest -v -s
