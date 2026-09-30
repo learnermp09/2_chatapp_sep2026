@@ -1,0 +1,11 @@
+langchain-core
+langchain-groq
+langserve
+
+python-dotenv
+fastapi
+
+streamlit
+
+pytest
+
